@@ -1,9 +1,9 @@
 pipeline {
     agent any
     stages {
-        stage('Hello') {
+        stage('version') {
             steps {
-                echo 'Hello World'
+                sh 'pwsh --version'
             }
         }
     }
