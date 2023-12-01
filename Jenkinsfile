@@ -1,9 +1,11 @@
 pipeline {
-  stages {
-    stage('version') {
-      steps {
-        sh 'pwsh --version'
-      }
+    agent any
+    stages {
+        stage('Hello') {
+            steps {
+                echo 'Hello World'
+            }
+        }
     }
-  }
 }
+
