@@ -1,7 +1,5 @@
 pipeline {
-    agent {
-        label 'Linux'
-    }
+    agent any
     stages {
         stage('version') {
             steps {
