@@ -1,5 +1,6 @@
 pipeline {
-  agent any
+  agent { label 'linux' }
+  tools { maven 'Maven' }
   stages {
     stage('version') {
       steps {
