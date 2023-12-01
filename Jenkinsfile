@@ -1,15 +1,19 @@
-pipeline {
-  agent any
-  stages {
-    stage('version') {
-      steps {
-        sh 'pwsh --version'
-      }
+pipeline{
+agent { 
+    label 'linux'
+}
+tools{
+    maven 'Maven'
+}
+stages{
+    stage("SCM Checkout"){
+        steps{
+        git 'https://github.com/cebuanos/jenkins-example-scripts-powershell.git'
+        }
     }
-    stage('hello') {
-      steps {
-        sh 'pwsh hello.ps1'
-      }
+    stage("Maven Build"){
+        steps{
+            sh 'mvn clean package'
+        }
     }
-  }
 }
