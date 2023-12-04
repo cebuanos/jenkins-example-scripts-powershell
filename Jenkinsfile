@@ -15,7 +15,10 @@ pipeline {
         }
         stage('Powershell Hello World'){
             steps {
-                sh "hello.ps1"
+                sh 'pwsh --version'
+            }
+            steps {
+                sh 'pwsh hello.ps1'
             }
         }
            
