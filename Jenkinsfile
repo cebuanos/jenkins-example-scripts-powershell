@@ -17,9 +17,6 @@ pipeline {
             steps {
                 sh 'pwsh --version'
             }
-            steps {
-                sh 'pwsh hello.ps1'
-            }
         }
            
     }
