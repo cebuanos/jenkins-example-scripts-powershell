@@ -1,11 +1,10 @@
 pipeline {
     agent any
     stages {
-        stage('version') {
+        stage('Example') {
             steps {
-                powershell -File hello.ps1
+                echo "Running ${env.BUILD_ID} on ${env.JENKINS_URL}"
             }
         }
     }
 }
-
