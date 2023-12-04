@@ -13,9 +13,11 @@ pipeline {
                 echo "I said, Hello Mr. ${username}"
             }
         }
-        stage('Powershell Hello World')
+        stage('Powershell Hello World'){
             steps {
                 sh "hello.ps1"
             }
+        }
+           
     }
 }
