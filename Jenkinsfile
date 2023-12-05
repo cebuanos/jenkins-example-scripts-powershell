@@ -15,7 +15,7 @@ pipeline {
         }
         stage('Invoke PowerShell Script'){
             steps {
-                sh 'hello.ps1'
+                sh "${env.WORKSPACE}/../${env.JOB_NAME}@script/script.sh"
             }
         }
            
