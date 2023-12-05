@@ -15,7 +15,7 @@ pipeline {
         }
         stage('Invoke PowerShell Script'){
             steps {
-                sh "pwsh --version"
+                sh 'hello.ps1'
             }
         }
            
