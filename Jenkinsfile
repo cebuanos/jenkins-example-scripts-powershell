@@ -15,7 +15,7 @@ pipeline {
         }
         stage('Invoke PowerShell Script'){
             steps {
-                sh "echo ${username}"
+                sh echo "pwsh --version"
             }
         }
            
