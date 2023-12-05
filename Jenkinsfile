@@ -13,9 +13,9 @@ pipeline {
                 echo "I said, Hello Mr. ${username}"
             }
         }
-        stage('Powershell Hello World'){
+        stage('Invoke PowerShell Script'){
             steps {
-                sh 'pwsh --version'
+                sudo pwsh -command "hello.ps1"
             }
         }
            
