@@ -15,7 +15,7 @@ pipeline {
         }
         stage('Invoke PowerShell Script'){
             steps {
-                sudo pwsh -command "hello.ps1"
+                sh "pwsh --version"
             }
         }
            
